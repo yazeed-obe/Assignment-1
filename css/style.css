@@ -1,0 +1,665 @@
+* , *:after , *:before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+        height: 500px;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.margin-bottom {
+    margin-bottom: 20px
+}
+
+
+
+.navbar {
+  background-color: #000;
+  overflow: hidden;
+    
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: #977C8F;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.navbar .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {float: none;}
+  .navbar.responsive .dropdown-content {position: relative;}
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+.home {
+    
+    /* The image used */
+  background-image: url('../images/Home/bac.jpg');
+  overflow: visible;
+
+  /* Full height */
+  height: 100%;
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+        position: relative;
+
+  /* Center and scale the image nicely */
+
+}
+
+
+.home .home-information {
+    position: absolute;
+     height: 50%;
+    top: 420px;
+    left: 15px;
+    
+    
+}
+.home .home-information  .home-title {
+    text-transform: capitalize;
+    color: white;
+    background: #000;
+    padding: 12px;
+
+}
+
+@media (max-width: 480px) {
+    .home {
+        background-image: url(' ../bac.jpg');
+    }
+}
+.team .info  {
+    
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.team .info h3 {
+    
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+.profiles {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 80px;
+        text-align: center;
+
+}
+
+.profile {
+  flex-basis: 260px;
+padding: 69px;
+
+}
+
+.profile .profile-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+
+.user-name {
+  margin-top: 30px;
+  font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+ .team .postion p {
+  font-size: 12px;
+  font-weight: 50;
+  color: #000;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 1150px) {
+  .profiles {
+    flex-direction: column;
+  }
+
+  .profile {
+    display: flex;
+      padding:10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile p {
+    text-align: center;
+    margin: 20px 60px 80px 60px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .heading {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+  }
+
+  .heading span {
+    font-size: 15px;
+  }
+
+  .profiles {
+    margin: 20px 0;
+  }
+
+  .profile p {
+    margin: 20px 10px 80px 10px;
+  }
+}
+
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.work {
+    
+    background: #5A4D4D;
+    position: relative;
+}
+
+.card{
+     width: 20%;
+     display: inline-block;
+    background: #fff;
+     margin: 2%;
+    }
+
+.card-info{
+     width: 20%;
+     display: inline-block;
+     margin: 2%;
+    top:100px;
+    }
+
+.card-info h2 {
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.card-info p {
+    color: #fff;
+    width: 100%;
+    height: 20%;
+}
+
+.image img{
+  width: 100%;
+ 
+
+ 
+ }
+
+.title{
+ 
+  padding: 10px;
+  
+ }
+
+h1{
+  font-size: 20px;
+ }
+
+.des p{
+  padding: 10px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.w3-teal, .w3-hover-teal:hover {
+    color: #fff!important;
+    background-color: #009688!important;
+}
+.w3-xlarge {
+    font-size: 24px!important;
+}
+.w3-circle {
+    border-radius: 50%;
+}
+.w3-btn, .w3-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.w3-btn, .w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+        margin-top: 430px;
+
+}
+
+@media only screen and (max-width: 1150px) {
+    
+    .work {
+        height:2100px;
+    }
+  .card {
+     flex-direction: column;
+      margin: auto;
+      padding: 90px 150px;
+      margin-bottom: 20px;
+    }
+    
+    .card .image{
+        margin-top: -100px;
+        width: 400px;
+    }
+
+
+
+  .card {
+    display: flex;
+      font-size: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+    
+
+   .card-info p {
+width: 400px;  
+       color: white;
+       margin-left: 35px;
+    text-align: center;
+       margin-bottom: 10px;
+        
+  }
+    
+       .card-info h2 {
+width: 400px;  
+           font-size: 30px;
+       color: white;
+       margin-left: 40px;
+    text-align: center;
+       margin-bottom: 10px;
+        
+  }
+    
+    .w3-btn, .w3-button{
+        margin-top: 2100px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 900px) {
+  .card-info {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+  }
+
+  .card-info p {
+    font-size: 15px;
+  }
+   
+}
+
+
+
+
+.contact .contact-info {
+    
+     width: 30%;
+     display: inline-block;
+    background: #fff;
+     margin: 2%;
+    padding: 15px;
+    
+}
+
+.contact .contact-info h2 {
+    
+  
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 20px;
+}
+
+.contact .contact-info h2:after{
+	content: '';
+    position: absolute;
+    left: 60px;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 120px;;
+    border-radius: 2px;
+    background-color: #C8C2C2;
+}
+
+.contact .contact-info h1 {
+    
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact .contact-info p {
+    
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.contact .contact-info i {
+    
+    color:#C8C2C2;
+
+
+    
+}
+
+
+.contact .contact-form {
+    
+     display: inline-block;
+    background: #fff;
+     margin: 5%;
+    padding: 15px;
+    
+}
+
+
+.contact-us{
+  width: 600px;
+  background: #fff;
+  padding: 50px;
+ box-shadow: 2px 2px 20px black;
+  position: relative;
+}
+
+.title h1{
+  color: #535274;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form,
+.form-items{
+  width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-items .input{
+padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+.form-items .input.message{
+  height: 125px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  padding: 15px 15px;
+  resize: none;
+}
+
+.btn{
+  background: #827ffe;
+  text-align: center;
+  color: #fff;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn .fas{
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.form-items{
+  position: relative;
+}
+
+.form-items .fas{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #9a99aa;
+}
+
+
+.check {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 6px;
+}
+
+.theme {
+    color: #fff !important;
+    background-color: #000000 !important;
+}
+.right {
+    float: right!important;
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+@media only screen and (max-width: 1150px) {
+
+ .contact {
+    flex-direction: column;
+  }
+
+  .contact {
+    display: flex;
+      padding:10px;
+    flex-direction: column;
+  }
+    
+    .contact .contact-us {
+        
+        width: 320px;
+    }
+    
+}
+
+
+.footer {
+   
+    background: #000;
+    height: 200px;
+    
+}
+
+.footer .footer-info h2 {
+    
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.footer .social_media{
+  text-align: center;
+}
+
+.footer .social_media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.footer .social_media  a{
+  display: block;
+      list-style-type: none;
+
+  margin: 0 5px;
+  color: #fff;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  background: #6C6C6C;
+  line-height: 50px;
+
+}
+
+
+
+#top-page {
+  width: 30px;
+  position: fixed;
+  right: 15px;
+  bottom: 30px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+   
+
+
